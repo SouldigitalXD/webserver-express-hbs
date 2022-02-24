@@ -13,26 +13,26 @@ hbs.registerPartials( __dirname + '/views/partials');
 // server static path
 app.use( express.static('public') );
 
-// app.get('/',  (req, res) => {
-//     res.render('home', {
-//         nombre: 'Daniel',
-//         titulo: 'Curso de Node'
-//     });
-// });
+app.get('/',  (req, res) => {
+    res.render('home', {
+        nombre: 'Daniel',
+        titulo: 'Curso de Node'
+    });
+});
 
-// app.get('/elements',  (req, res) => {
-//     res.render('elements', {
-//         nombre: 'Daniel',
-//         titulo: 'Curso de Node'
-//     });
-// });
+app.get('/elements',  (req, res) => {
+    res.render('elements', {
+        nombre: 'Daniel',
+        titulo: 'Curso de Node'
+    });
+});
 
-// app.get('/generic',  (req, res) => {
-//     res.render('generic', {
-//         nombre: 'Daniel',
-//         titulo: 'Curso de Node'
-//     });
-// });
+app.get('/generic',  (req, res) => {
+    res.render('generic', {
+        nombre: 'Daniel',
+        titulo: 'Curso de Node'
+    });
+});
 
 app.get('*', (req, res) => {
     res.sendFile( __dirname, + './public/index.html' );
